@@ -1,0 +1,141 @@
+/*******general*******/
+*{
+
+    font-family: 'Roboto', sans-serif; 
+    position: relative;
+}
+footer h2{
+    font-family: 'Shrikhand', cursive;
+}
+
+
+:root{
+    --main-bt-color: #9356DC;
+    --main-color-new: #99E2D0;    
+}
+.contenair{
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1440px;
+}
+/**********main**********/
+main{
+    display: flex;
+    flex-direction: column;
+}
+header img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+}
+header .fa-solid{
+    left: 20px;
+}
+main img{
+    width: 100%;
+    height: 10%;
+}
+.menu{
+    width: 100%;
+    background-color: #F7F7F7;
+    border-radius: 25px 25px 0px 0px;
+    position: absolute;
+    top: 280px;
+}
+
+.heart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+h2{
+    width: 80%;
+    height: 27px;
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 28px;
+    padding-left: 17px;
+}
+.onlyheart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.repas{
+    width: 60%;
+    border-bottom: 3px solid #99E2D0;
+    padding-left: 13px;
+    margin-bottom: 15px;
+}
+.choix{
+    /*display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;*/
+    background-color: #F8F9F6 ;
+    height: 72.38px;
+    width: 93%;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;   
+    margin-bottom: 15px;
+    margin-left: 5px;
+    border: #F8F9F6;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.text-card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column ;
+}
+
+.com{
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    width: 60%;
+    height: 50px;
+    border-radius: 40px;
+    white-space: nowrap;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.commander{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**********footer*********/
+
+footer{
+    background-color: rgb(66, 65, 65);
+    color: white;
+    padding-left: 25px;
+}
+footer h2{
+    padding-top: 15px;
+    margin-top: 0px;
+}
+.foot{
+    display: flex;
+    flex-direction: column;
+    Padding: 22px, 25px, 22px, 25px;
+            
+}
+.choice{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
