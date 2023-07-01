@@ -1,8 +1,52 @@
 /*******general*******/
 *{
-
     font-family: 'Roboto', sans-serif; 
 }
+
+
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 999;
+    opacity: 0.8;
+    animation: progress-bar 3000ms;
+    visibility: hidden;
+
+}
+  
+.rubik-loader{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(http://i.giphy.com/3og0ISeflb7vrNzy2A.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes progress-bar {
+    0%{
+        visibility: visible;
+  
+    }
+    100%{
+        visibility: hidden;
+        
+    }
+    
+}
+
+
+a{
+    text-decoration: none;
+}
+
 footer h2{
     font-family: 'Shrikhand', cursive;
 }
@@ -17,9 +61,7 @@ footer h2{
     box-sizing: border-box;
     max-width: 1440px;
 }
-body{
 
-}
 
 /******Header*******/
 header{
@@ -38,12 +80,9 @@ header img{
     align-items: center;
     object-fit: cover;
 }
-.fa-solid{
-    height: 30px;
-    padding-right: 5px;
-    display: flex;
-    align-items: center;
-}
+
+/****************main***************/
+
 .location{
     display: flex;
     justify-content: center;
@@ -82,11 +121,15 @@ header img{
     border-radius: 40px;
     white-space: nowrap;
     color: white;
-    border: 1px solid white;
+    border: none ;
     text-align: center;
     font-size: 15px;
     font-weight: 600;
     margin-top: 30px;
+}
+.explo:hover{
+    opacity: 0.9;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 .fonctionnement{
     padding-bottom: 50px;
@@ -100,7 +143,7 @@ header img{
     align-items: center;
     background-color: #F8F9F6 ;
     height: 72.38px;
-    width: 322.49px;
+    width: 90%;
     border-radius: 20px;
     font-size: 16px;
     font-weight: bold;
@@ -109,6 +152,7 @@ header img{
     margin-left: 15px;
     border: #F8F9F6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .chiffre{
@@ -142,16 +186,56 @@ header img{
     flex-direction: column;
     padding-bottom: 60px;
 }
+.onlyheart{
+    font-size: 20px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+}
+.heart__icon--empty{
+    position: absolute;
+    top: 15px; right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    font-size: 25px;
+    color: black;
+    font-weight: 100;
+}
+
+.my-heart-full{
+        position: absolute;
+        top: 15px; right: 15px;
+        opacity: 0;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+        transition-duration: 2s;
+        margin-right: 16px;
+        font-size: 25px;
+}
+.my-heart-full:hover{
+        opacity: 1;
+}
+.heart__icon--empty:hover {
+        opacity: 0;
+}
+
 .carte{
-    width: 350px;
+    width: 95%;
     height: 251px;
     background-color: #F7F7F7;
     border-radius: 15px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     margin-top: 33px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-
+    text-decoration: none;
 }
+
 .carte img{
     width: 100%;
     height: 65%;
@@ -174,14 +258,21 @@ header img{
     font-weight: 600;
     font-size: 14px;
 }
+.cart-content{
+    display: flex;
+    justify-content: space-between;
+}
 
 .cart-text{
+    text-decoration: none;
     height: 35%;
     display: flex;
     flex-direction: column;
     align-items: start;
     padding-left: 10px ;
+    color: black;
 }
+
 .cart-text h3{
     margin:10px 0px 5px 0px;
 }
@@ -204,4 +295,68 @@ footer h2{
     display: flex;
     align-items: center;
     padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
 }
+footer .footer__choice{
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1200px) {
+        .reservation h2{
+            font-size: 40px;
+            font-weight: 700;
+            height: 47px;
+        }
+        .explo{
+            width: 17%;
+        }
+
+        .fonctionnement {
+            margin: 0% 10% 0% 10%;
+        }
+
+        .choix{
+            width: 30%;
+            margin-left: 0px;
+        }
+        .fonction{
+            display: flex;
+            justify-content: space-between;
+        }
+        .restaurant{
+            margin: 0% 15% 0% 15%;
+        }
+        .allcartes{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .carte{
+            width: 48%;
+        }
+        .foot{
+            display: flex;
+            justify-content: end;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+        footer{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: end;
+            height: 114px;
+        }
+        footer h2{
+            margin-bottom: 28px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .choice{
+            margin-right: 15px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    
+    }

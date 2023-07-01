@@ -1,0 +1,219 @@
+/*******general*******/
+*{
+
+    font-family: 'Roboto', sans-serif; 
+    box-sizing: border-box
+
+
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  /*visibility: hidden;*/
+}
+
+.rubik-loader{
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(http://i.giphy.com/3og0ISeflb7vrNzy2A.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+footer h2{
+    font-family: 'Shrikhand', cursive;
+}
+
+
+:root{
+    --main-bt-color: #9356DC;
+    --main-color-new: #99E2D0;    
+}
+.contenair{
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1440px;
+}
+/**********main**********/
+main{
+    display: flex;
+    flex-direction: column;
+}
+header img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+}
+header .fa-solid{
+    left: 20px;
+}
+main img{
+    width: 100%;
+    height: 10%;
+}
+.menu{
+    width: 100%;
+    background-color: #F7F7F7;
+    border-radius: 25px 25px 0px 0px;
+    margin-top: -25px;
+    top: 280px;
+}
+
+.heart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0px px 0px;
+}
+h2{
+    width: 80%;
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 28px;
+    padding-left: 17px;
+    margin: 0px 0px 0px 0px ;
+}
+.onlyheart{
+    font-size: 20px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+}
+.heart__icon--empty{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+
+
+    }
+.my-heart-full{
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+}
+.my-heart-full:hover{
+        opacity: 1;
+
+}
+.heart__icon--empty:hover {
+        opacity: 0;
+}
+
+.repas{
+    width: 60%;
+    font-weight: 300;
+    /*border-bottom: 3px solid #99E2D0;*/
+    padding-left: 13px;
+    /*margin-bottom: 15px;*/
+}
+.trait{
+    margin: 5px 0px 13px 13px;
+    border: 2px #99E2D0 solid;
+    width: 40px;
+
+}
+.choix{
+    /*display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;*/
+    background-color: #F8F9F6 ;
+    height: 72.38px;
+    width: 98%;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;   
+    margin-bottom: 15px;
+    margin-left: 5px;
+    border: #F8F9F6;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.principale{
+    text-align: start;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+    color: #000000;
+}
+
+.com{
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    width: 60%;
+    height: 50px;
+    border-radius: 40px;
+    white-space: nowrap;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+.fonction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.commander{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 20px 0px ;
+}
+.text{
+    font-size: 15px;
+    font-weight: 300;
+    text-align: start;
+    display: flex;   
+    justify-content: space-between;
+    line-height: 18px;
+    padding-top: 5px;
+}
+
+
+/**********footer*********/
+
+footer{
+    background-color: rgb(66, 65, 65);
+    color: white;
+    padding-left: 25px;
+}
+footer h2{
+    padding-top: 15px;
+    margin-top: 0px;
+}
+.foot{
+    display: flex;
+    flex-direction: column;
+    Padding: 22px, 25px, 22px, 25px;
+            
+}
+.choice{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}

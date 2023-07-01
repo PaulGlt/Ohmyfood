@@ -1,9 +1,10 @@
 /*******general*******/
 *{
-
     font-family: 'Roboto', sans-serif; 
-    position: relative;
+    box-sizing: border-box;
 }
+
+
 footer h2{
     font-family: 'Shrikhand', cursive;
 }
@@ -23,17 +24,28 @@ main{
     display: flex;
     flex-direction: column;
 }
-header img{
+header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+}
+header img{
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
 }
 .arrow{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px 0px 15px 0px;
+    margin: 25px 0px 25px 0px;
+}
+.fa-arrow-left{
+    position: absolute;
+    top: 20px; left: 0px;
+    color: black;
 }
 header .fa-solid{
     left: 20px;
@@ -46,43 +58,82 @@ main img{
     width: 100%;
     background-color: #F7F7F7;
     border-radius: 25px 25px 0px 0px;
-    position: absolute;
-    top: 280px;
+    margin-top: -25px;
 }
 
 .heart{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 20px 0px px 0px;
 }
 h2{
     width: 80%;
-    height: 27px;
     font-family: 'Shrikhand';
     font-weight: 400;
     font-size: 28px;
     padding-left: 17px;
+    margin: 0px 0px 0px 0px ;
 }
 .onlyheart{
+    font-size: 20px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+}
+.heart__icon--empty{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    margin-right: 16px;
+
+
+    }
+.my-heart-full{
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+        transition-duration: 1s;
 }
+.my-heart-full:hover{
+        opacity: 1;
+
+}
+.heart__icon--empty:hover {
+        opacity: 0;
+}
+
 .repas{
     width: 60%;
-    border-bottom: 3px solid #99E2D0;
+    font-weight: 300;
     padding-left: 13px;
-    margin-bottom: 15px;
+}
+.trait{
+    margin: 5px 0px 13px 13px;
+    border: 2px #99E2D0 solid;
+    width: 40px;
+
+}
+.fa-check{
+    border: 1px solid #99E2D0;
+    border-radius: 50% 50%;
+    background-color: white;
+    color:#99E2D0;
+    padding: 1px 3px 1px 3px ;
+
 }
 .choix{
-    /*display: flex;
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;*/
+    display: flex;
+    align-items: center;
     background-color: #F8F9F6 ;
     height: 72.38px;
-    width: 93%;
+    width: 100%;
     border-radius: 20px;
     font-size: 18px;
     font-weight: 500;   
@@ -90,32 +141,102 @@ h2{
     margin-left: 5px;
     border: #F8F9F6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
-.text-card{
+.principale{
+    text-align: start;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 20px;
+    margin: 4px 0px 4px;
+
+}
+.text{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: width 0.05s ;
+    padding-left: 20px;
+}
+
+.choix__flex{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    margin: 5px 0px 4px;
+}
+
+.vlo{
+  width: 100%;
+  min-width: 100%;
+
+}
+.choix__prix{
+  width: 60px;
+  transition: all 200ms ease-in-out;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+
+}
+.animation{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column ;
+    border: 0px solid #99E2D0;
+    background-color: #99E2D0;
+    border-radius: 0px 20px 20px 0px;
+    height: 72.38px;
+    width: 70px;
+    min-width: 70px;
+    transition: all 200ms ease-in-out;  
+}
+.choix:hover .choix__prix{
+    transform: translate(-70px);
+  
+}
+.choix:hover .animation {
+    transform: translate(-70px);
+  
+}
+.choix:hover .text {
+    width: calc(100% - 120px);
 }
 
 .com{
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    width: 60%;
+    width: 250px;
     height: 50px;
     border-radius: 40px;
     white-space: nowrap;
     color: white;
-    border: 1px solid white;
+    border: none;
     text-align: center;
     font-size: 15px;
     font-weight: 600;
-    margin-top: 30px;
+    transition: all 250ms;
+}
+.com:hover{
+    opacity: 0.8;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+.fonction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .commander{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px 0px 20px 0px ;
 }
+
+
 
 /**********footer*********/
 
@@ -134,8 +255,80 @@ footer h2{
     Padding: 22px, 25px, 22px, 25px;
             
 }
+
 .choice{
     display: flex;
     align-items: center;
     padding-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+@keyframes apparition{
+    0%{
+        transform: translate(0px, 20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.entrees{
+    opacity: 0;
+    animation: apparition 1000ms linear 0s;
+    animation-fill-mode: forwards;
+}
+.plats{
+    opacity: 0;
+    animation: apparition 1000ms linear 0.3s;
+    animation-fill-mode: forwards;
+}
+.dessert{
+    opacity: 0;
+    animation: apparition 1000ms linear 0.6s;
+    animation-fill-mode: forwards;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+@media screen and (min-width: 1200px){
+    main img{
+        height: 383px;
+        object-fit: cover;
+    }
+
+    .menu{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left:10%;
+        margin-right: 10%;
+    }
+    .foot{
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: end;
+        height: 114px;
+    }
+    footer h2{
+        margin-bottom: 28px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .choice{
+        margin-right: 15px;
+        font-size: 16px;
+        font-weight: 400;
+    }
 }
